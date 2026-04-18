@@ -2,7 +2,7 @@ class SquigitStt < Formula
   desc "Standalone purely headless CLI STT engine for Squigit"
   homepage "https://github.com/squigit-org/squigit"
   url "https://github.com/squigit-org/squigit/releases/download/stt-v0.1.0/squigit-stt-mac-aarch64.tar.gz"
-  sha256 "0ce0706317f9071dae682399c9b8bd8b3b20a5d96f0753f66e93376d4205354c"
+  sha256 "de5b83aef5abb71c1b3bd2afdf93af7cc15488bfa915cef88fee56177b0bd28e"
   version "0.1.0"
 
   def install
