@@ -6,6 +6,10 @@ class SquigitOcr < Formula
   version "INSERT_VERSION_HERE"
 
   def install
+    unless OS.mac? && Hardware::CPU.arm?
+      odie "squigit-ocr currently supports macOS arm64 (Apple Silicon) only."
+    end
+
     libexec.install Dir["*"]
     bin.install_symlink libexec/"squigit-ocr"
   end
