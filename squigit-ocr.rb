@@ -2,7 +2,7 @@ class SquigitOcr < Formula
   desc "Standalone purely headless CLI OCR engine for Squigit"
   homepage "https://github.com/squigit-org/squigit"
   url "https://github.com/squigit-org/squigit/releases/download/ocr-v0.1.0/squigit-ocr-mac-aarch64.tar.gz"
-  sha256 "5475dbd4f113b554c383f59da62d6ac9a309fd2d914c91e2dc75bbe96ec4b9ff"
+  sha256 "7802f46b5c2fbebaa539928d6fbd39700182cd20d185238f7ab2dbf48c789383"
   version "0.1.0"
 
   def install
