@@ -62,34 +62,21 @@ end
 
 content = formula_path.read
 
-def replace_required_line(content, pattern, replacement, label)
-  updated = content.sub(pattern, replacement)
+def replace_required_line(content, key, value)
+  # Accept either quote style, optional trailing whitespace/comments, and CRLF line endings.
+  pattern = /^(\s*#{Regexp.escape(key)}\s+)(["']).*?\2(\s*(?:#.*)?)$/
+  updated = content.sub(pattern) { "#{Regexp.last_match(1)}\"#{value}\"#{Regexp.last_match(3)}" }
   if updated == content
-    raise "Unable to find #{label} line in formula."
+    raise "Unable to find #{key} line in formula."
   end
   updated
 end
 
 begin
   updated = content.dup
-  updated = replace_required_line(
-    updated,
-    /^(\s*url\s+)".*"$/,
-    "\\1\"#{options[:url]}\"",
-    "url"
-  )
-  updated = replace_required_line(
-    updated,
-    /^(\s*sha256\s+)".*"$/,
-    "\\1\"#{options[:sha256]}\"",
-    "sha256"
-  )
-  updated = replace_required_line(
-    updated,
-    /^(\s*version\s+)".*"$/,
-    "\\1\"#{options[:version]}\"",
-    "version"
-  )
+  updated = replace_required_line(updated, "url", options[:url])
+  updated = replace_required_line(updated, "sha256", options[:sha256])
+  updated = replace_required_line(updated, "version", options[:version])
 rescue StandardError => e
   warn "Failed to update formula: #{e.message}"
   exit 1
