@@ -1,9 +1,9 @@
 class SquigitOcr < Formula
   desc "Standalone purely headless CLI OCR engine for Squigit"
   homepage "https://github.com/a7mddra/squigit"
-  url "https://github.com/a7mddra/squigit/releases/download/ocr-v0.1.1/squigit-ocr-mac-aarch64.tar.gz"
-  sha256 "cda2692f2ad474cee6fe60757073c0ef8e6a679caab35c61a6c54c593ad35228"
-  version "0.1.1"
+  url "https://github.com/a7mddra/squigit/releases/download/ocr-v0.1.0/squigit-ocr-mac-aarch64.tar.gz"
+  sha256 "a29751cf15a517f4703a130256dcf43cea65540fe55703f15923d6aad8065685"
+  version "0.1.0"
 
   def install
     unless OS.mac? && Hardware::CPU.arm?
