@@ -1,8 +1,9 @@
 class SquigitOcr < Formula
   desc "Standalone purely headless CLI OCR engine for Squigit"
   homepage "https://github.com/squigit-org/squigit"
+  # Source template: release CI copies this file into the tap repo, then fills metadata via pkg.rb.
   url "https://github.com/squigit-org/squigit/releases/download/ocr-v0.1.0/squigit-ocr-mac-aarch64.tar.gz"
-  sha256 "7802f46b5c2fbebaa539928d6fbd39700182cd20d185238f7ab2dbf48c789383"
+  sha256 "33ec1a254c33fde6b75af14830bc294d1cd04119a8cd4efd7c2277eb65a399e3"
   version "0.1.0"
 
   def install
