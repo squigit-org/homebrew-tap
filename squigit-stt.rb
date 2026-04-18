@@ -1,9 +1,8 @@
 class SquigitStt < Formula
   desc "Standalone purely headless CLI STT engine for Squigit"
   homepage "https://github.com/squigit-org/squigit"
-  # Source template: release CI copies this file into the tap repo, then fills metadata via pkg.rb.
   url "https://github.com/squigit-org/squigit/releases/download/stt-v0.1.0/squigit-stt-mac-aarch64.tar.gz"
-  sha256 "2a09aa064f6f6cb73761c4813cd57f2bd8a04acb96fc2af5d61d94a0720f39eb"
+  sha256 "524ea5ef68c30d4e4a881513f39cb69321d1aa2a92477681096d0ff7085c83f4"
   version "0.1.0"
 
   def install
